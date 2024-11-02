@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procrastination Encourager</title>
+    <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procrastination Encourager</h1>
+        
+        <!-- Score Board will be inserted here by JavaScript -->
+        
+        <div id="tip-container">
+            <p id="procrastination-tip">Click for a procrastination tip!</p>
+            
+            <div id="rating-section">
+                <span>Rate this tip:</span>
+                <div id="star-rating">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <div id="rating-feedback"></div>
+            </div>
+            
+            <button onclick="showRandomTip()" class="action-button">New Tip</button>
+        </div>
+        
+        <div id="mood-selector">
+            <label for="mood">Choose your mood:</label>
+            <select id="mood" onchange="showMoodTip()">
+                <option value="lazy">Lazy</option>
+                <option value="overwhelmed">Overwhelmed</option>
+                <option value="ambitious">Ambitious</option>
+                <option value="bored">Bored</option>
+                <option value="creative">Creative</option>
+                <option value="tired">Tired</option>
+                <option value="distracted">Distracted</option>
+                <option value="stressed">Stressed</option>
+            </select>
+        </div>
+
+        <div id="countdown">
+            <div id="countdown-display">
+                <div class="progress-bar"></div>
+            </div>
+            <button onclick="startCountdown()" class="action-button">Start Countdown</button>
+        </div>
+    </div>
+
+    
+    <audio id="click-sound" preload="auto">
+        <source src="sounds/click1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="achievement-sound" preload="auto">
+        <source src="sounds/click2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="encouragement-sound" preload="auto">
+        <source src="sounds/click3.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="pro.js"></script>
+</body>
+</html>

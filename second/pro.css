@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    padding: 20px;
+    background-image: url('asset/Download\ premium\ image\ of\ Cat\ architecture\ cityscape\ building\ about\ neon\ cafe\,\ cat\ cafe\,\ cityscape\ purple\ cat\,\ neon\ cafe\ cat\,\ and\ cat\ cityscape\ 14236391.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Score Board Styles */
+.score-board {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.current-score {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #28a745;
+    text-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+    margin: 10px 0;
+}
+
+.high-scores {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+.high-score-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #666;
+}
+
+.high-score-entry.current-user {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Tip Container Styles */
+#tip-container {
+    margin-bottom: 25px;
+}
+
+#procrastination-tip {
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+/* Rating System Styles */
+#rating-section {
+    margin: 20px 0;
+}
+
+#star-rating {
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 0 2px;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffd700;
+}
+
+/* Mood Selector Styles */
+#mood-selector {
+    margin: 25px 0;
+}
+
+select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+/* Button Styles */
+.action-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.action-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Countdown Styles */
+#countdown-display {
+    width: 100%;
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #28a745;
+    transition: width 1s linear;
+}
+
+
+.encouragement-alert,
+.points-alert {
+    position: fixed;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background: #28a745;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.encouragement-alert {
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.encouragement-alert.show {
+    top: 20px;
+}
+
+.points-alert {
+    top: 20px;
+    right: -300px;
+}
+
+.points-alert.show {
+    right: 20px;
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Sound Toggle Button */
+.sound-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 1001;
+}
+
+.sound-toggle:hover {
+    transform: scale(1.1);
+}
+
+
+.pulse {
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.05); opacity: 0.8; }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #22ff26;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 10%; opacity: 1; }
+}
+
